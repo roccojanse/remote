@@ -11,20 +11,32 @@ module.exports = function(grunt) {
                     trace: true,
                     precision: 3,
                     noCache: true,
-                    banner: '/* <%= pkg.name %> <%= pkg.version %> (c)<%= pkg.author %> */'
+                    unixNewlines: true
+                    //banner: '/* <%= pkg.name %> <%= pkg.version %> (c)<%= pkg.author %> */'
                 },
                 files: {
                     'css/<%= pkg.name %>.css': ['src/sass/main.scss']
                 }
             }
+        },
+
+        concat: {
+        //     // options: {
+        //     //       separator: '\n',
+        //     // },
+             dist: {
+                 src: ['src/js/main.js'],
+                 dest: 'js/<%= pkg.name %>.js'
+             }
         }
 
     });
 
     // load plugins
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     // define task(s)
-    grunt.registerTask('default', ['sass']);
+    grunt.registerTask('default', ['sass', 'concat']);
 
 };

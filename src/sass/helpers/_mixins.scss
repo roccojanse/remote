@@ -1,0 +1,5 @@
+// set font-size with fallback
+@mixin file-size($size) {
+    font-size: strip-units($size)*10px;   
+    font-size: $size;
+}
