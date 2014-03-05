@@ -1,0 +1,16 @@
+{
+  "name": "remote",
+  "version": "0.0.1",
+  "author": "Rocco Janse",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roccojanse/remote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roccojanse/remote/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-sass": "~0.7.2"
+  }
+}
