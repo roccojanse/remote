@@ -26,6 +26,10 @@
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
         });
+        
+        var socket = io.connect('http://192.168.0.111:8081');
+
+        socket.emit('set pairingcode', id, true);
 
     });
 
